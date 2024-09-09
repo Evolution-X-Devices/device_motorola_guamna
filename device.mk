@@ -36,6 +36,11 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,livedisplay_sysfs,enable_ab,true)
 
+# Moto Camera 4
+TARGET_MOTCAMERA3 := guamna
+
+$(call inherit-product, vendor/motorola/MotCamera4-bengal/motcamera4.mk)
+
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
