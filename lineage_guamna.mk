@@ -23,6 +23,6 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="guamp_retail-user 11 RPX31.Q2-58-17-7-5 2e132 release-keys" \
-    BuildFingerprint=motorola/guamp_retail/guamp:11/RPX31.Q2-58-17-7-5/2e132:user/release-keys \
-    DeviceProduct=guamp_retail
+    BuildDesc="guamna_retail-user 11 RZA31.Q2-146-14-22-2 8a7d1 release-keys" \
+    BuildFingerprint=motorola/guamna_retail/guamna:11/RZA31.Q2-146-14-22-2/8a7d1:user/release-keys \
+    DeviceProduct=guamna_retail
