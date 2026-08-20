@@ -5,7 +5,7 @@ persist.vendor.audio.fluence.voicecomm=true
 ro.audio.monitorRotation=true
 
 # Camera
-persist.vendor.camera.physical.num=4
+persist.vendor.camera.physical.num=3
 
 # Display
 persist.sys.sf.color_mode=7
@@ -20,4 +20,4 @@ vendor.false_touch_quality=25
 ro.hardware.keystore_desede=true
 
 # Radio
-ro.vendor.radio.imei.sv=29
+ro.vendor.radio.imei.sv=33

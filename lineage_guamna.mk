@@ -8,16 +8,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device
-$(call inherit-product, device/motorola/guamp/device.mk)
+$(call inherit-product, device/motorola/guamna/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_guamp
-PRODUCT_DEVICE := guamp
+PRODUCT_NAME := lineage_guamna
+PRODUCT_DEVICE := guamna
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := moto g(9) play
+PRODUCT_MODEL := moto g play (2021)
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola

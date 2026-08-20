@@ -6,10 +6,10 @@
 # Inherit from sm6225-common
 include device/motorola/sm6225-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/guamp
+DEVICE_PATH := device/motorola/guamna
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := guamp
+TARGET_BOOTLOADER_BOARD_NAME := guamna
 
 # Display
 TARGET_SCREEN_DENSITY := 280
@@ -35,7 +35,7 @@ ODM_MANIFEST_NC_FILES := $(DEVICE_PATH)/sku/manifest_nc.xml
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
-TARGET_KERNEL_CONFIG += vendor/ext_config/guamp-default.config
+TARGET_KERNEL_CONFIG += vendor/ext_config/guamna-default.config
 
 # Kernel Modules - Audio
 TARGET_MODULE_ALIASES += \
@@ -68,4 +68,4 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 BOARD_AVB_ROLLBACK_INDEX := 20
 
 # Inherit from the proprietary version
-include vendor/motorola/guamp/BoardConfigVendor.mk
+include vendor/motorola/guamna/BoardConfigVendor.mk

@@ -83,4 +83,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/motorola/guamp/guamp-vendor.mk)
+$(call inherit-product, vendor/motorola/guamna/guamna-vendor.mk)
