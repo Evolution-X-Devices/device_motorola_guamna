@@ -61,11 +61,11 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 43
 
 # Security patch level
-BOOT_SECURITY_PATCH := 2022-09-01
+BOOT_SECURITY_PATCH := 2023-02-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
-BOARD_AVB_ROLLBACK_INDEX := 20
+BOARD_AVB_ROLLBACK_INDEX := 19
 
 # Inherit from the proprietary version
 include vendor/motorola/guamna/BoardConfigVendor.mk

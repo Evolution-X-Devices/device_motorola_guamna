@@ -31,12 +31,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/etc/init/android.hardware.nfc@1.2-service-moto.rc': blob_fixup()
-        .regex_replace('class hal', 'override\n    class hal'),
-    'vendor/etc/libnfc-nci.conf': blob_fixup()
-        .regex_replace('NFC_DEBUG_ENABLED=0x01', 'NFC_DEBUG_ENABLED=0'),
-    'vendor/etc/libnfc-nxp.conf': blob_fixup()
-        .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02'),
     (
         'vendor/lib64/com.qti.feature2.gs.so',
         'vendor/lib64/com.qti.feature2.rt.so',
@@ -44,12 +38,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/hw/com.qti.chi.override.so',
     ): blob_fixup()
         .binary_regex_replace(b'camera.mot.is.coming.cts', b'vendor.camera.coming.cts'),
-    'vendor/lib64/libvidhance.so': blob_fixup()
-        .add_needed('libcomparetf2_shim.so'),
-    (
-        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
-        'vendor/lib64/camera/components/com.vidhance.node.processing.so',
-    ): blob_fixup()
+    'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
 }  # fmt: skip
 
