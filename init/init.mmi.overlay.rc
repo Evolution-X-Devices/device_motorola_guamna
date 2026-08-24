@@ -3,20 +3,20 @@ on mmi-priority
     # For instance, sensor_class referenced from several DLKMs
     # and needs to load first. Touchscreen might need extra time
     # to perform firmware update if necessary
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_annotate mmi_info mmi_sys_temp
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules mmi_annotate mmi_info mmi_sys_temp mcDrvModule
 
 on fs
     # Majority of MMI DLKMs should be in this group
     insmod /vendor/lib/modules/cci_intf.ko
     insmod /vendor/lib/modules/himax_v3_mmi_hx83102d.ko
     insmod /vendor/lib/modules/himax_v3_mmi.ko
-    insmod /vendor/lib/modules/ili9882_mmi.ko
     insmod /vendor/lib/modules/chipone_tddi_mmi.ko
-    insmod /vendor/lib/modules/nova_0flash_mmi.ko
+    insmod /vendor/lib/modules/ili9882_mmi.ko
+    insmod /vendor/lib/modules/focaltech_0flash_mmi.ko
     insmod /vendor/lib/modules/qpnp_adaptive_charge.ko
     insmod /vendor/lib/modules/qpnp-power-on-mmi.ko
 
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules sensors_class abov_sar_mmi_overlay audio_snd_soc_aw882xx
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules sensors_class abov_sar_mmi_overlay audio_snd_soc_aw882xx tps61280
 
 on early-boot
     # Goodix fingerprint
