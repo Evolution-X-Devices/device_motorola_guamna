@@ -162,6 +162,14 @@ vendor/firmware/a630_sqe.fw
 # OEM
 vendor/etc/vhw.xml
 
+# Perf configs
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+vendor/etc/powerhint.xml
+
 # Sensors configs
 vendor/etc/sensors/config/bengal_default_sensors.json
 vendor/etc/sensors/config/bengal_dynamic_sensors.json
